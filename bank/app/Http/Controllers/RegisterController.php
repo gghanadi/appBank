@@ -9,4 +9,8 @@ class RegisterController extends Controller
     public function index(){
         return view('register');
     }
+
+    public function add(Request $req){
+        return view('login');
+    }
 }
