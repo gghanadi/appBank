@@ -25,6 +25,7 @@
             </div>
         </form>
     </div>
+    <small class="d-block text-center mt-3">Not Register? <a href="{{ route('register') }}"> Register Now</a> </small>
     </div>
 </div>
 @endsection

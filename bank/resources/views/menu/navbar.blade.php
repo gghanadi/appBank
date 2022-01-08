@@ -1,5 +1,5 @@
 @auth
-<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #9eadba;">
+<nav class="navbar navbar-expand-lg navbar-light " style="background-color: #9eadba;">
     <div class="container">
       <a class="navbar-brand" href="/">Home</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,7 +24,7 @@
                   {{ auth()->user()->name }}
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><button type="submit" class="dropdown-item"><i class="bi bi-person-plus"></i> Tambah Orang</button></li>
                   <li><hr class="dropdown-divider"></li>
                   <li>
                     <form action="{{route('logout')}}" method="POST">
@@ -47,3 +47,4 @@
       <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #9eadba;">
       </nav>
       @endauth
+      
