@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 use DB;
-
+use App\Models\nasabah;
 use Illuminate\Http\Request;
 
 class RegisterController extends Controller
@@ -13,9 +13,8 @@ class RegisterController extends Controller
 
     public function add(Request $req){
       $validation = $req->validate([
-            'name' =>'required'
+            'name' =>'required',
         ]);
-        dd('berhasil');
-       DB::table('nasabahs')->create($validation);
+      nasabah::create($validation);
     }
 }
