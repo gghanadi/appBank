@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use DB;
 
 use Illuminate\Http\Request;
 
@@ -11,6 +12,10 @@ class RegisterController extends Controller
     }
 
     public function add(Request $req){
-        return view('login');
+      $validation = $req->validate([
+            'name' =>'required'
+        ]);
+        dd('berhasil');
+       DB::table('nasabahs')->create($validation);
     }
 }

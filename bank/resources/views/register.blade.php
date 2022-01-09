@@ -16,17 +16,19 @@
             <input type="password" class="form-control" id="password" name="password" placeholder="password">
             <label for="username">Password</label>
           </div>
+          
         <div class="form-floating mt-2">
             <input type="password" class="form-control" id="password2" name="passowrd2" placeholder="password2">
             <label for="password2">Comfirm password</label>
         </div>
+        
+        <div class="form-floating mt-2">
+            <input type="text" class="form-control" id="name" name="name" placeholder="name">
+            <label for="name">Nama anda</label>
+          </div>
         <div class="form-floating mt-2">
             <input type="number" class="form-control" id="pin" name="pin" placeholder="pin">
             <label for="pin">Masukan Pin anda</label>
-        </div>
-        <div class="form-floating mt-2">
-            <input type="number" class="form-control" id="rekening" name="rekening" placeholder="rekening">
-            <label for="rekening">No rekening</label>
         </div>
         <div class="form-floating mt-2">
             <input type="email" class="form-control" id="email" name="username" placeholder="Email">
@@ -49,8 +51,12 @@
             <label for="Kota">Kota</label>
         </div>
         <div class="form-floating mt-2">
-            <input type="text" class="form-control" id="ibu" name="ibu" placeholder="ibu">
-            <label for="ibu">Nama ibu anda</label>
+            <input type="text" class="form-control" id="alamat" name="alamat" placeholder="alamat">
+            <label for="alamat">Alamat anda</label>
+        </div>
+        <div class="form-floating mt-2">
+            <input type="text" class="form-control" id="namaibukandung" name="namaibukandung" placeholder="namaibukandung">
+            <label for="namaibukandung">Nama ibu anda</label>
         </div>
         <div class="form-group form-floating mt-2 p-2">
             <button class="w-20 btn btn-primary" type="submit" name="submit" id="submit" > Login </button>

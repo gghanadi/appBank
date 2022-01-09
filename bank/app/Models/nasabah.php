@@ -14,7 +14,6 @@ class nasabah extends Model
         'name',
         'email',
         'pin',
-        'norekening',
         'namaibukandung',
         'loan',
         'provinsi',
@@ -26,5 +25,10 @@ class nasabah extends Model
     protected $hidden = [
         'pin',
         'namaibukandung',
+    ];
+
+    protected $guarded = [
+        'id',
+        'norekening'
     ];
 }
