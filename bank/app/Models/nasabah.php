@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
+use Uuid;
 
 class nasabah extends Model
 {
@@ -19,7 +20,7 @@ class nasabah extends Model
         'provinsi',
         'kota',
         'alamat',
-        'phone'
+        'phone',
     ];
 
     protected $hidden = [
@@ -28,7 +29,13 @@ class nasabah extends Model
     ];
 
     protected $guarded = [
-        'id',
-        'norekening'
+        'id'
     ];
+    public static function boot()
+    {
+        parent::boot();
+        self::creating(function ($model) {
+            $model->norekening = mt_rand(1000,9999);
+        });
+    }
 }

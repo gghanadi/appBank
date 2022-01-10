@@ -22,7 +22,6 @@ class User extends Authenticatable
         'username',
         'name',
         'email',
-        'role',
         'password',
     ];
 
@@ -44,4 +43,12 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public static function boot()
+    {
+        parent::boot();
+        self::creating(function ($model) {
+            $model->role = 3;
+        });
+    }
 }

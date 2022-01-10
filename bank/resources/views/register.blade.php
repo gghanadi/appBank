@@ -9,12 +9,12 @@
            Form Register
         </div>
         <div class="form-floating mt-2">
-            <input type="text" class="form-control" id="username" name="username" placeholder="username">
+            <input type="text" class="form-control " id="username" name="username" placeholder="username">
             <label for="username">username</label>
           </div>
         <div class="form-floating mt-2">
-            <input type="password" class="form-control" id="password" name="password" placeholder="password">
-            <label for="username">Password</label>
+            <input type="password" class="form-control @error('password')is-invalid @enderror" id="password" name="password" placeholder="password">
+            <label for="password">Password</label>
           </div>
           
         <div class="form-floating mt-2">
@@ -27,11 +27,11 @@
             <label for="name">Nama anda</label>
           </div>
         <div class="form-floating mt-2">
-            <input type="number" class="form-control" id="pin" name="pin" placeholder="pin">
+            <input type="number" class="form-control " id="pin" name="pin" placeholder="pin">
             <label for="pin">Masukan Pin anda</label>
         </div>
         <div class="form-floating mt-2">
-            <input type="email" class="form-control" id="email" name="username" placeholder="Email">
+            <input type="email" class="form-control " id="email" name="email" placeholder="Email">
             <label for="email">Email</label>
          </div>
         <div class="form-floating mt-2">
@@ -59,7 +59,7 @@
             <label for="namaibukandung">Nama ibu anda</label>
         </div>
         <div class="form-group form-floating mt-2 p-2">
-            <button class="w-20 btn btn-primary" type="submit" name="submit" id="submit" > Login </button>
+            <button class="w-20 btn btn-primary" type="submit" name="submit" id="submit" > Register </button>
         </div>
     </div>
 </div>
