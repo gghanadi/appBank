@@ -36,5 +36,6 @@ class RegisterController extends Controller
       $validation2['password'] = bcrypt($validation2['password']);
       User::create($validation2);
       nasabah::create($validation);
+      return view('/login');
     }
 }
