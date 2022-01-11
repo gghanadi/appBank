@@ -9,7 +9,7 @@
            Form Register
         </div>
         <div class="form-floating mt-2">
-            <input type="text" class="form-control " id="username" name="username" placeholder="username">
+            <input type="text" class="form-control @error('username') is-invalid @enderror" id="username" name="username" placeholder="username">
             <label for="username">username</label>
           </div>
         <div class="form-floating mt-2">
@@ -23,7 +23,7 @@
         </div>
         
         <div class="form-floating mt-2">
-            <input type="text" class="form-control" id="name" name="name" placeholder="name">
+            <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" placeholder="name">
             <label for="name">Nama anda</label>
           </div>
         <div class="form-floating mt-2">
@@ -31,7 +31,7 @@
             <label for="pin">Masukan Pin anda</label>
         </div>
         <div class="form-floating mt-2">
-            <input type="email" class="form-control " id="email" name="email" placeholder="Email">
+            <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" name="email" placeholder="Email">
             <label for="email">Email</label>
          </div>
         <div class="form-floating mt-2">
@@ -74,6 +74,7 @@
     if(pass!==pass2){
         alert('mohon check kembali password anda');
     }
+
    });
 </script>
 @endpush
