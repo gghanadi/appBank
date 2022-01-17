@@ -1,12 +1,14 @@
 <?php
 
 namespace App\Http\Controllers;
+use Auth;
 
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
     public function index(){
-        return view('home');
+        $norek = Auth::user()->norekening;
+        return view('home',compact('norek'));
     }
 }

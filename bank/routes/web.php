@@ -18,8 +18,12 @@ Route::group(['middleware'=>['guest']],function(){
     Route::get('/login',[App\Http\Controllers\loginController::class, 'index'])->name('login');
     Route::post('authenticate',[App\Http\Controllers\loginController::class, 'authenticate'])->name('authenticate');
     Route::post('register',[App\Http\Controllers\RegisterController::class, 'add'])->name('add');
-    Route::post('logout',[App\Http\Controllers\LogoutController::class, 'logout'])->name('logout');
 });
 Route::group(['middleware'=>['auth']],function(){ 
     Route::get('/',[App\Http\Controllers\HomeController::class, 'index']);
+    Route::get('/store',[App\Http\Controllers\StoreController::class, 'index']);
+    Route::get('/tarik',[App\Http\Controllers\TarikController::class, 'index']);
+    Route::post('logout',[App\Http\Controllers\LogoutController::class, 'logout'])->name('logout');
+    Route::post('store_money',[App\Http\Controllers\StoreController::class, 'store_money'])->name('store_money');
+    Route::post('tarik_uang',[App\Http\Controllers\TarikController::class, 'tarik_uang'])->name('tarik_uang');
  });

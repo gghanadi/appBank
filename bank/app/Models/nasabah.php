@@ -17,6 +17,7 @@ class nasabah extends Model
         'pin',
         'namaibukandung',
         'loan',
+        'norekening',
         'provinsi',
         'kota',
         'alamat',
@@ -31,11 +32,4 @@ class nasabah extends Model
     protected $guarded = [
         'id'
     ];
-    public static function boot()
-    {
-        parent::boot();
-        self::creating(function ($model) {
-            $model->norekening = mt_rand(1000,9999);
-        });
-    }
 }

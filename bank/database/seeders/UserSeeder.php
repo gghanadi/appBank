@@ -18,6 +18,7 @@ class UserSeeder extends Seeder
             'name'=>'admin',
             'email'=>'gannet@gmail.com',
             'role'=>'1',
+            'norekening'=>'000000000000',
             'password'=>bcrypt('check123'),
         ]);
     }

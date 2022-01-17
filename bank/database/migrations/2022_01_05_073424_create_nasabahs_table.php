@@ -16,7 +16,7 @@ class CreateNasabahsTable extends Migration
         Schema::create('nasabahs', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->integer('pin');
+            $table->string('pin');
             $table->integer('norekening');
             $table->string('namaibukandung');
             $table->string('phone');

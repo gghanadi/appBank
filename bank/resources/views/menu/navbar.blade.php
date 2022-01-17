@@ -8,10 +8,10 @@
       <div class="collapse navbar-collapse" id="navbarNav">
                   <ul class="navbar-nav mr-auto">
                       <li class="nav-item"> 
-                        <a class="nav-link" href="/">Tarik Tunai</a>
+                        <a class="nav-link" href="/tarik">Tarik Tunai</a>
                       </li>
                       <li class="nav-item"> 
-                        <a class="nav-link" href="/">Store Tunai</a>
+                        <a class="nav-link" href="/store">Store Tunai</a>
                       </li>
                       <li class="nav-item"> 
                         <a class="nav-link" href="/">History</a>

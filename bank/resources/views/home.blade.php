@@ -1,7 +1,9 @@
 @extends('menu.main')
 @section('content')
-    <h1> Ini menu home </h1>
-    
+<div class="text-center">
+    <h1> Selamat datang {{auth()->user()->name}}</h1>
+    <h3> no rek anda adalah {{$norek}}</h3>
+</div>    
 @push('script')
 <script type="text/javascript"> 
    
