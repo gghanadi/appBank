@@ -21,6 +21,7 @@ Route::group(['middleware'=>['guest']],function(){
 });
 Route::group(['middleware'=>['auth']],function(){ 
     Route::get('/',[App\Http\Controllers\HomeController::class, 'index']);
+    Route::get('/history',[App\Http\Controllers\HistoryController::class, 'index']);
     Route::get('/store',[App\Http\Controllers\StoreController::class, 'index']);
     Route::get('/tarik',[App\Http\Controllers\TarikController::class, 'index']);
     Route::post('logout',[App\Http\Controllers\LogoutController::class, 'logout'])->name('logout');

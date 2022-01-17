@@ -14,7 +14,7 @@
                         <a class="nav-link" href="/store">Store Tunai</a>
                       </li>
                       <li class="nav-item"> 
-                        <a class="nav-link" href="/">History</a>
+                        <a class="nav-link" href="/history">History</a>
                       </li>
                  </li>
               </ul>
