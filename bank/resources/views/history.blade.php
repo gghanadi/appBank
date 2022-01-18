@@ -1,6 +1,6 @@
 @extends('menu.main')
 @section('content')
-<div class="tabel">
+<div class="text-center">
     <table class="table table-border" style="border: 10px">
         <tr>
             <th>Jenis transaksi</th>
@@ -11,7 +11,7 @@
         <tr>
             <td>{{$datas->jenis_transaksi}}</td>
             <td>{{$datas->loan}}</td>
-            <td>{{$datas->updated_at}}</td>
+            <td>{{$datas->updated_at->timezone('Asia/Bangkok')}}</td>
         </tr>
         @endforeach
     </table>
