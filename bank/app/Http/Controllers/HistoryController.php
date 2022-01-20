@@ -11,7 +11,7 @@ class HistoryController extends Controller
 {
     public function index(){
         $user = Auth::user()->norekening;
-        $data = History::where("norekening","=","$user")->get();
+        $data = History::where("norekening","=","$user")->paginate(5);
         return view('history',compact('data'));
     }
 }

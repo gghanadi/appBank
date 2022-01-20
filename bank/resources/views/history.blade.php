@@ -15,8 +15,11 @@
         </tr>
         @endforeach
     </table>
+    
+    <div class="d-flex justify-content-center">
+        {!! $data->links('pagination::bootstrap-4') !!}
+    </div>
 </div>
-
 @push('script')
 <script type="text/javascript"> 
    
