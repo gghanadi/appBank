@@ -2,7 +2,10 @@
 @section('content')
 <div class="text-center">
     <h1> Selamat datang {{auth()->user()->name}}</h1>
-    <h3> no rek anda adalah {{$norek}}</h3>
+    @foreach ($data as $datas)
+        <h4>no rekening anda {{$datas->norekening}}</h4>
+        <h4>saldo anda {{$datas->loan}}</h4>
+    @endforeach
 </div>    
 @push('script')
 <script type="text/javascript"> 

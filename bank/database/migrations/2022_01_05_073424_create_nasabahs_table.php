@@ -20,7 +20,7 @@ class CreateNasabahsTable extends Migration
             $table->integer('norekening');
             $table->string('namaibukandung');
             $table->string('phone');
-            $table->integer('loan');
+            $table->string('loan');
             $table->string('provinsi');
             $table->string('kota');
             $table->string('alamat');

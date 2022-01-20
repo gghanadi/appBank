@@ -29,11 +29,14 @@ class TarikController extends Controller
         ]);
         History::create($insert);
         $users = DB::table('nasabahs')->where('norekening','=',$norek)->get('loan');
-        $history = DB::table('histories')->where('norekening','=',$norek)->get('loan');
+        $history = DB::select("select loan from histories where norekening = '$norek' order by id desc limit 1 ");
         $total = (json_decode($users[0]->loan))  -  (json_decode($history[0]->loan));
+        if((json_decode($users[0]->loan))  <  (json_decode($history[0]->loan)) ){
+            return back()->with('ErrorSaldo','Saldo anda tidak mencukupi untuk di tarik!');
+        }
         nasabah::where('norekening',$norek)
                 ->update(['loan'=>$total]);
-        return view('home')->with('norek');
+        return redirect('/');
 
     }
 }

@@ -1,7 +1,7 @@
 @extends('menu.main')
 @section('content')
 <div class="text-center">
-    <table class="table table-border" style="border: 10px">
+    <table class="table table-hover table-bordered" style="border: 1px">
         <tr>
             <th>Jenis transaksi</th>
             <th>Jumlah uang</th>

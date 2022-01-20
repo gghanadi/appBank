@@ -13,9 +13,12 @@
                       <li class="nav-item"> 
                         <a class="nav-link" href="/store">Store Tunai</a>
                       </li>
+                      @if (Auth::getUser()->role==3)
                       <li class="nav-item"> 
                         <a class="nav-link" href="/history">History</a>
                       </li>
+                      @endif
+                      
                  </li>
               </ul>
               <ul class="navbar-nav ms-auto">
@@ -24,8 +27,10 @@
                   {{ auth()->user()->name }}
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  @if (Auth::getUser()->role=1)
                   <li><button type="submit" class="dropdown-item"><i class="bi bi-person-plus"></i> Tambah Orang</button></li>
                   <li><hr class="dropdown-divider"></li>
+                  @endif
                   <li>
                     <form action="{{route('logout')}}" method="POST">
                         @csrf

@@ -18,7 +18,7 @@ class CreateHistoriesTable extends Migration
             $table->string('name');
             $table->integer('norekening');
             $table->string('jenis_transaksi');
-            $table->integer('loan');
+            $table->string('loan');
             $table->timestamps();
         });
     }

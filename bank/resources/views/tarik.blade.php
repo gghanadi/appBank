@@ -1,5 +1,11 @@
 @extends('menu.main')
 @section('content')
+    @if(session()->has('ErrorSaldo'))
+                <div class="alert alert-danger alert-dismissble fade show" role="alert">
+                    {{session('ErrorSaldo')}}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+    @endif
     <form action="{{route('tarik_uang')}}" method="POST">
         @csrf
     <main class="form-registration">
@@ -17,7 +23,7 @@
             <label for="email">uang yang ingin di tarik</label>
         </div>
         <div class="form-group form-floating mt-2 p-2">
-            <button class="w-20 btn btn-primary" type="submit" name="submit" id="submit" > Register </button>
+            <button class="w-20 btn btn-primary" type="submit" name="submit" id="submit" > Submit </button>
         </div>
     </div>
 </div>

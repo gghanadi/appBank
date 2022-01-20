@@ -17,7 +17,7 @@
             <label for="email">uang yang ingin di simpan</label>
         </div>
         <div class="form-group form-floating mt-2 p-2">
-            <button class="w-20 btn btn-primary" type="submit" name="submit" id="submit" > Register </button>
+            <button class="w-20 btn btn-primary" type="submit" name="submit" id="submit" > Submit </button>
         </div>
     </div>
 </div>
