@@ -41,6 +41,6 @@ class RegisterController extends Controller
       $validation['pin'] = bcrypt($validation['pin']);
       User::create($validation2);
       nasabah::create($validation);
-      return redicret('/');
+      return redirect('/');
     }
 }

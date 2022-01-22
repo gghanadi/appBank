@@ -16,6 +16,7 @@ class TarikController extends Controller
 
     public function tarik_uang(Request $req){
         $norek = Auth::user()->norekening;
+        $loan = $req->loan;
         $req->merge([
             'name' => Auth::user()->name,
             'norekening'=> $norek,
@@ -27,13 +28,12 @@ class TarikController extends Controller
             'jenis_transaksi'=>'required',
             'loan'=>'required'
         ]);
-        History::create($insert);
         $users = DB::table('nasabahs')->where('norekening','=',$norek)->get('loan');
-        $history = DB::select("select loan from histories where norekening = '$norek' order by id desc limit 1 ");
-        $total = (json_decode($users[0]->loan))  -  (json_decode($history[0]->loan));
-        if((json_decode($users[0]->loan))  <  (json_decode($history[0]->loan)) ){
+        $total = ( (json_decode($users[0]->loan))  - $loan );
+        if((json_decode($users[0]->loan))  <  $loan ){
             return back()->with('ErrorSaldo','Saldo anda tidak mencukupi untuk di tarik!');
         }
+        History::create($insert);
         nasabah::where('norekening',$norek)
                 ->update(['loan'=>$total]);
         return redirect('/');

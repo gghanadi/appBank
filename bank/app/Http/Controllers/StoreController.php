@@ -16,6 +16,7 @@ class StoreController extends Controller
 
     public function store_money(Request $req){
         $norek = Auth::user()->norekening;
+        $loan = $req->loan;
         $req->merge([
             'name' => Auth::user()->name,
             'norekening'=> $norek,
@@ -27,10 +28,9 @@ class StoreController extends Controller
             'jenis_transaksi'=>'required',
             'loan'=>'required'
         ]);
-        History::create($insert);
         $users = DB::table('nasabahs')->where('norekening','=',$norek)->get('loan');
-        $history = DB::select("select loan from histories where norekening = '$norek' order by id desc limit 1 ");
-        $total = (json_decode($users[0]->loan))  +  (json_decode($history[0]->loan));
+        $total = ( (json_decode($users[0]->loan))  +  $loan);
+        History::create($insert);
         nasabah::where('norekening',$norek)
                 ->update(['loan'=>$total]);
         return redirect('/');
